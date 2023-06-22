@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagamento</title>
+    <link rel="stylesheet" href="./pg_pagamento.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="principal">
+    <header id="header">
+        <a id="logo" href="carrinho.html"><img src="img/seta.png" width="20px"></a>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="/">Minha Conta</a></li>
+            <li><a href="principal.html">Produtos</a></li>
+            <li><a href="carrinho.php">Carrinho</a></li>
+            <li><a href="fale_conosco.html">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script src="./script.js"></script>
+    </div>
+
+    <div class="div2">
+        <div class="barra">
+            
+            <img src="img/logo.png" width="110px" class="logo">
+            <img src="img/titulo1.png" width="190px" class="titulo">
+        </div>
+    </div>
+      <div class="div3">
+        <b>formas de pagamento</b>
+        <br>
+      </div>
+      <div class="div4">
+       <b>Valor total do seu pedido: R$ <span>125.55</span></b>
+      </div>
+
+      <div class="div5">
+        <b>Confirme o seu endereço: </b>
+        <br> <br>
+        </div>
+
+        <div class="div6">
+
+        <fieldset class="fild">
+          <legend class="legend"><b>Cep</b></legend>
+       
+          <input maxlength="9" type="number" id="cep" onkeyup="ValidarCEP();">
+<script>
+          function ValidarCEP()
+    {
+        //acesse o site regex101.com
+        expressao = /[0-9]{5}-[0-9]{3}$/g; 
+        texto = cep.value;
+        if (texto.length==5)
+        {
+            cep.value = texto + "-";
+        }
+
+        resposta = expressao.test(texto);
+        if (resposta==true)
+         {
+            cep.classList.remove('errado');
+            cep.classList.add('certo');
+         }
+        if (resposta==false)
+         {
+            cep.classList.remove('certo');
+            cep.classList.add('errado');
+         }
+    }
+
+  </script>
+      </fieldset>
+  </div>
+      <div class="div7">
+          <a href="pgpix1.html"><button class="bt1"><b><img src="img/pix.png" width="60px" class="pix"> Pix </b></button></a>
+          <a href="cartao.html"><button class="bt2"><b><img src="img/cartao.png" width="60px" class="cartao">Cartão</b></button></a>
+      </div>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #EDD9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    font-family: "Audiowide", sans-serif;
+}
+
+
+.div1
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+  
+
+.barra
+{
+    width: 360px;
+    height: 3vh;
+    background-color: #7D0000;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+
+.logo
+{
+    margin-left: 25px;
+}
+
+.titulo
+{
+    margin-left: 10px;
+    margin-top: -50px;
+    width: 200px;
+}
+
+.carrinho
+{
+    width: 100%;
+    height: 10vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.carro
+{
+ width: 80px;
+}
+
+.direita
+{
+    position: absolute;
+    left: 250px;
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.esquerda
+{
+    position: absolute; 
+    left: 10px;
+    width: 50%;
+    height: 10vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.tudo
+{
+    width: 100%;
+    height: 15vh;
+    margin-top: 10px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.fild
+{
+    width: 100px;
+    height: 100px;
+  
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.pedido
+{
+    border-style: none;
+}
+
+.caixa
+{
+    width:100px;
+    height: 3vh;  
+}
+
+.nome
+{
+    margin-left: 10px;
+    width: 45%;
+    font-size: 17px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.ult
+{
+    width: 50%;
+    height: 15vh;
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.preencher
+{
+    width: 100%;
+    height: 4vh;
+}
+
+.imagem
+{
+    margin-left: 15px;
+    width: 80px;
+    height: 80px;
+    border:2px solid #7D0000;
+    border-radius: 20px;
+}
+
+.comprar
+{
+  width: 110px;
+  height: 5vh;
+  border-radius:15px;
+  background-color: #7D0000;
+  color: white;
+}

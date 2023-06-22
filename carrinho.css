@@ -1,0 +1,245 @@
+body
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #EDD9D9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 0px;
+    font-family: "Audiowide", sans-serif;
+}
+
+
+.div1
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+  
+
+.barra
+{
+    width: 360px;
+    height: 3vh;
+    background-color: #7D0000;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+
+
+.logo
+{
+    margin-left: 25px;
+}
+
+.titulo
+{
+    margin-left: 10px;
+    margin-top: -50px;
+    width: 200px;
+}
+
+.carrinho
+{
+    width: 100%;
+    height: 10vh;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.carro
+{
+ width: 80px;
+}
+
+.direita
+{
+    position: absolute;
+    left: 250px;
+    width: 30%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.esquerda
+{
+    position: absolute; 
+    left: 10px;
+    width: 50%;
+    height: 10vh;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.tudo
+{
+    width: 100%;
+    height: 15vh;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.fild
+{
+    width: 35%;
+    height: 15vh;
+  
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.pedido
+{
+    border-style: none;
+}
+
+.caixa
+{
+    width:100px;
+    height: 3vh;  
+}
+
+.nome
+{
+    width: 35%;
+    height: 15vh;
+  
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.ult
+{
+    width: 50%;
+    height: 15vh;
+    
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.preencher
+{
+    width: 100%;
+    height: 4vh;
+  
+}
+
+.fechar
+{
+    margin-left: 100px;
+}
+
+.quantidade
+{
+    width: 100%;
+    height: 5vh;
+   
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.botao
+{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.geral
+{
+    border-style: none;
+}
+
+
+.menos
+{
+    width: 25%;
+    height: 3vh;
+    background-color: aliceblue;
+    border-radius: 5px;
+
+}
+
+.numero
+{
+    width: 34%;
+    height: 2vh;
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.mais
+{
+    width: 25%;
+    height: 3vh; 
+    background-color: aliceblue;
+    border-radius: 5px;
+  
+}
+
+.teste1
+{
+    border-style: none;
+}
+.teste
+{
+    width: 130px;
+    height: 5vh;
+    font-size: 13.5px;
+    background-color: #7D0000;
+    cursor: pointer;
+    cursor: auto;
+    color: white;
+}

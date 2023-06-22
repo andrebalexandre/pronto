@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOLHA</title>
+    <link rel="stylesheet" href="escolha.css">
+    <link rel="stylesheet" href="./style.css">
+
+
+
+</head>
+<body>
+  <div class="principal">
+    <header id="header">
+        <a id="logo" href="doces.html"><img src="img/seta.png" width="20px"></a>
+        <nav id="nav">
+          <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu">
+            <li><a href="/">Minha Conta</a></li>
+            <li><a href="principal.html">Produtos</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="fale_conosco.html">Fale conosco</a></li>
+          </ul>
+        </nav>
+      </header>
+      <script src="./script.js"></script>
+    </div>
+
+    </div>
+
+    <div class="div2">
+        <div class="barra">
+            
+            <img src="img/logo.png" width="110px" class="logo">
+            <img src="img/titulo1.png" width="190px" class="titulo">
+        </div>
+    </div>
+
+    <div class="foto">
+       <b>BROWNIE</b> 
+        <img src="img/brownie.png" width="150px">
+        <br>
+        
+
+    </div>
+ 
+        <fieldset class="fil1"> <legend> ESCOLHA SUA PREFERÊNCIA</legend>
+        
+          <table align="center">
+            <tr>
+              <td> <input type="checkbox"> SEM OVO</td>  <td><input type="checkbox"> SEM GLÚTEM</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox"> SEM LEITE</td>  <td><input type="checkbox"> SEM AÇUCAR</td>
+            </tr>
+          </table>
+        </fieldset>
+           
+    </div>
+  <div class="uni">
+
+   <fieldset class="fil2">
+
+    <button onclick="Subtrair();" class="menos"> <b>-</b> </button>
+    <input class="numero" value="1" id="numero" type="number">
+    <button onclick="Adicionar();" class="mais"><b>+</b></button>
+
+
+   </fieldset>
+     <br> 
+   
+    
+  <button onclick="comprar(3)" class="comprar"> COMPRAR </button>
+   
+    <script>
+      function Adicionar()
+      {
+          numero.value=parseInt(numero.value)+1
+         
+      }
+
+      function Subtrair()
+      {
+          if(numero.value >1)
+          {
+              numero.value=parseInt(numero.value)-1
+          }
+          
+
+      }
+
+      function comprar(Id_produtos)
+      {
+        quantidade = numero.value
+        window.open("comprar.php?Id_produtos="+Id_produtos+"&quantidade="+quantidade,"_self")
+      }
+      
+  </script>
+
+  </div>
+</div>
+
+   
+    
+
+   
+</body>
+</html>

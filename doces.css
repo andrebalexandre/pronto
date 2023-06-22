@@ -1,0 +1,191 @@
+body
+    {
+        width: 100%;
+        height: 100vh;
+        background-color: #EDD9D9;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    .div1
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+
+    .div3
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .div4
+    {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .barra
+    {
+        width: 360px;
+        height: 20px;
+        background-color: #7D0000;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+
+    
+    .barrinha
+    {
+        margin-top: 20px;
+        margin-left: 310px;
+
+
+    }
+
+    .logo
+    {
+        margin-left: 15px;
+    }
+
+    .titulo
+    {
+        margin-left: 20px;
+        margin-top: -45px;
+    }
+
+    .imagens
+    {
+        margin-left: 35px;
+        margin-top: 60px;
+        border:2px solid #7D0000;
+        border-radius: 20px;
+    }
+
+    .textobolo
+    {
+        margin-left: 30px;
+        margin-top: 75px;
+    }
+
+    .textosonho
+    {
+        margin-left: 40px;
+        margin-top: 75px;
+    }
+
+    .textobrownie
+    {
+        margin-left: 80px;
+        margin-top: 75px;
+    }
+
+    .textocookie
+    {
+        margin-left: 80px;
+        margin-top: 75px;
+    }
+
+    .textomisto
+    {
+        margin-left: 35px;
+        margin-top: 75px;
+    }
+
+    .quadradinhobolo
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 130px;
+        height: 25px;
+        background-color: #7D0000;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: 25px;
+        color: white;
+    }
+
+    .quadradinhocookie
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 130px;
+        height: 25px;
+        background-color: #7D0000;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: -26px;
+        color: white;
+    }
+
+    .quadradinhosonho
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 130px;
+        height: 25px;
+        background-color: #7D0000;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: 15px;
+        color: white;
+    }
+
+    .quadradinhobrownie
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 130px;
+        height: 25px;
+        background-color: #7D0000;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: -25px;
+        color: white;
+    }
+
+    .quadradinhomisto
+    {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        width: 130px;
+        height: 25px;
+        background-color: #7D0000;
+        margin-top: 30px;
+        margin-left: 0px;
+        color: white;
+    }
+
+    .margemfinal
+    {
+        width: 300px;
+        height: 60px;
+        margin-left: 30px;
+        border-style: solid;
+        border-color: #7D0000;
+        border-radius: 10px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #EDD9D9;
+    }
