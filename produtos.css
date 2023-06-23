@@ -135,15 +135,11 @@ body
 .nome
 {
     margin-left: 10px;
-    width: 45%;
     font-size: 17px;
-    height: 15vh;
+    height: 100px;
     display: flex;
-    justify-content: center;
-    justify-items: center;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+    text-align: center;
+
 }
 
 .ult

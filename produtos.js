@@ -1,6 +1,6 @@
-function redirecionarParaCompra() {
-    // Adicione a lógica de redirecionamento aqui
-    // Por exemplo, se você quiser redirecionar para a página "compra.html":
-    window.location.href = "compra.html?id=" + id;
-  }
+function comprarRedirecionar(id) {
+  // Realize qualquer lógica adicional, se necessário
   
+  // Redirecione para a tela diferente usando o ID como parâmetro, por exemplo:
+  window.location.href = 'produto_individual.php?id=' + id;
+}

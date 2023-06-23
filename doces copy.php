@@ -7,6 +7,7 @@
     <title>Doces</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="produtos.css">
+    <script src="produtos.js"></script>
 
 </head>
 <body>
@@ -38,7 +39,7 @@
     <br><br><br>
 <?php
             include("conecta.php"); // conectar com banco de dados
-            $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.categoria = 'salgados';");
+            $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.categoria = 'doces';");
             $resultado = $comando->execute();  
 
             while ( $linhas = $comando->fetch() )
@@ -47,6 +48,7 @@
                 $imagem = $linhas ["imagem"];
                 $i=base64_encode($imagem);
                 $preco = $linhas ["preco"];
+                $id = $linhas ["Id_produtos"];
                 echo("
                 <div class=\"tudo\" id=\"tudo\">
 
@@ -55,13 +57,13 @@
             </div>
 
             <div class=\"nome\">
-               <b>$Nome</b>
+                <b>$Nome</b>
                 <br>
                 <b>R$ $preco</b>
             </div>
 
-            <div class=\"ult\">
-                <button class=\"comprar\"> COMPRAR </button>
+            <div class=\"ult\">  
+                <button class=\"comprar\" onclick=\"comprarRedirecionar('$id')\">COMPRAR</button>
             </div>
             </div>
             </div>

@@ -1,7 +1,7 @@
 <?php
 include("conecta.php"); // conectar com banco de dados
 
-$comando = $pdo->prepare("SELECT * FROM produtos");
+$comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.preco, produtos.imagem FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos" );
 $resultado = $comando->execute();
 
 
@@ -16,7 +16,7 @@ $resultado = $comando->execute();
     <title>Carrinho</title>
     <link rel="stylesheet" href="carrinho.css">
     <link rel="stylesheet" href="./style.css">
-    <script  src="carrinho.js"></script>
+    <script src="carrinho.js"></script>
 
 
 </head>
@@ -59,26 +59,15 @@ $resultado = $comando->execute();
             </div>
            
         </div>
-
-
-
-
-
-
-
-
         <?php
-            
-            
             while ( $linhas = $comando->fetch() )
             {
-                $Id_produto = $linhas ["id_produto"];
+                $id = $linhas ["Id_produtos"];
                 $Nome = $linhas ["nome"];
                 $imagem = $linhas ["imagem"];
                 $imagem=base64_encode($imagem);
                 $preco = $linhas ["preco"];
                 echo("
-
                 <div class=\"tudo\" id=\"tudo\">
 
             <div class=\"fild\">
@@ -92,9 +81,9 @@ $resultado = $comando->execute();
             </div>
 
             <div class=\"ult\">
-        </div>
+
                  <div class=\"preencher\">
-                    <img onclick=\"Fechar($Id_produto);\" class=\"fechar\" src='img/x.png' width=\"25px\">
+                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='' width=\"30px\">
                  </div>
 
                  <div class=\"quantidade\">
@@ -107,29 +96,38 @@ $resultado = $comando->execute();
                  <div class=\"botao\">  </div>
             </div>
         </div>
-                
                 ");
-
-
-
             }
-            
-
         ?>
 
-        
+<fieldset class="teste1">
+           <a href="pg_pagamentos.html"> <button  class="teste">COMPRAR</button> </a>
+         </fieldset>
 
+        <script>
+            function Adicionar()
+            {
+                numero.value=parseInt(numero.value)+1
+               
+            }
 
-<fieldset class="teste1">     
-    <a href="pg_pagamentos.html"> <button  class="teste">COMPRAR</button> </a>     
-</fieldset>
+            function Subtrair()
+            {
+                if(numero.value >1)
+                {
+                    numero.value=parseInt(numero.value)-1
+                }
+                
 
-<script>
-    function voltar() 
+            }
+
+            function voltar() 
     {
         window.history.back();
     }
-</script>
+            
+
+        </script>
     
 </body>
 </html>
