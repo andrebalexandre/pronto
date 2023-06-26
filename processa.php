@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conexao.php");
+include_once("conecta.php");
 
 if(!empty($_POST['estrela'])){
 	//$logado = $_SESSION["logado"];
@@ -13,10 +13,10 @@ if(!empty($_POST['estrela'])){
 	$resultado_avaliacao = mysqli_query($conn, $resultado_avaliacao);
 	
 	if(mysqli_insert_id($conn)){
-		$_SESSION['msg'] = "Avaliação cadastrada com sucesso";
+		$_SESSION['msg'] = "Avaliação enviada com sucesso";
 		header("Location: entrega.php");
 	}else{
-		$_SESSION['msg'] = "Erro ao cadastrar a avaliação";
+		$_SESSION['msg'] = "Erro ao enviar a avaliação";
 		header("Location: entrega.php");
 	}
 	

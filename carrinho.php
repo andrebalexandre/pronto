@@ -10,13 +10,15 @@ $resultado = $comando->execute();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="website icon " type="png"
+  href="img/logo.png">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho</title>
     <link rel="stylesheet" href="carrinho.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="carrinho.js"></script>
+    <script src="js/carrinho.js"></script>
 
 
 </head>
@@ -29,15 +31,15 @@ $resultado = $comando->execute();
                 <span id="hamburger"></span>
               </button>
               <ul id="menu" role="menu">
-                <li><a href="/">Minha Conta</a></li>
+                <li><a href="minhaconta.php">Minha Conta</a></li>
                 <li><a href="principal.html">Produtos</a></li>
-                <li><a href="">Sobre nós</a></li>
-                <li><a href="/carrinho.html">Carrinho</a></li>
-                <li><a href="/fale_conosco1.html">Fale conosco</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="fale_conosco1.html">Fale conosco</a></li>
               </ul>
             </nav>
           </header>
-          <script src="./script.js"></script>
+          <script src="js/script.js"></script>
         </div>
 
         <div class="div2">

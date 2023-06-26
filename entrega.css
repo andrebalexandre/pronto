@@ -21,7 +21,7 @@ body
 
     .div4
     {
-        margin-top: 40px;
+        margin-top: 60px;
         margin-left: 24px;
         width: 315px;
         height: 50px;
@@ -320,13 +320,18 @@ body
 
       .avaliacao
       {
+        margin-top: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         justify-items: center;
         align-items: center;
         align-content: center;
+        font-size: 15px;
+        color: black;
       }
+
+     
 
       .btavaliar
       {
@@ -336,21 +341,24 @@ body
         background-color: #7D0000;
         color: white;
         border-radius: 15px;
+        margin-left: 40px;
       }
-      
       
 
     .estrelas input[type=radio]
       {
         display: none;
+        font-size: 40px;
        
       }
     .estrelas label i.fa:before
       {
         content: '\f005';
         color: #FC0;
+        font-size: 40px;
       }
     .estrelas  input[type=radio]:checked  ~ label i.fa:before
     {
         color: #CCC;
+        font-size: 40px;
       }

@@ -33,7 +33,7 @@ session_start();
               </ul>
             </nav>
           </header>
-          <script src="./script.js"></script>
+          <script src="js/script.js"></script>
         </div>
         <div class="div2">
             <div class="barra">
@@ -55,7 +55,7 @@ session_start();
                         <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
                     </svg>
                 </span>
-                <script src="entrega.js"></script>
+                <script src="js/entrega.js"></script>
                 <div class="truck">
                     <div class="wheel"></div>
                     <div class="back"></div>
@@ -64,8 +64,9 @@ session_start();
                 </div>   
             </button>
     </div>
+    <br>
 <div class="avaliacao">
-    <h1>Avalie</h1>
+    <h1>Avalie o seu Pedido!</h1>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg']."<br><br>";

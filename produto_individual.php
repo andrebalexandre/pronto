@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="produto_individual.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <script src="produto_individual.js"></script>
+    <script src="js/produto_individual.js"></script>
 
 </head>
 <body>
@@ -20,15 +20,15 @@
             <span id="hamburger"></span>
           </button>
           <ul id="menu" role="menu">
-            <li><a href="/">Minha Conta</a></li>
+            <li><a href="minhaconta.php">Minha Conta</a></li>
             <li><a href="principal.html">Produtos</a></li>
             <li><a href="sobrenos.html">Sobre nós</a></li>
-            <li><a href="carrinho.html">Carrinho</a></li>
+            <li><a href="carrinho.php">Carrinho</a></li>
             <li><a href="fale_conosco.html">Fale conosco</a></li>
           </ul>
         </nav>
       </header>
-      <script src="./script.js"></script>
+      <script src="js/script.js"></script>
     </div>
     <div class="div2">
         <div class="barra">

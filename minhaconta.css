@@ -8,14 +8,27 @@ body
         margin: 0px;
         overflow: hidden;
     }
-
     .div1
     {
         display: flex;
         justify-content: center;
         justify-items: center;
     }
+    .div3
+    {
+        margin-top: 70px;
+        margin-left: 20px;
+        width: 320px;
+        height: 480px;
+        background-color: aquamarine;
+        border-radius: 10px;
+        width: 330px;
+        background-color: #e4cece;
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
 
+    }
     .barra
     {
         width: 360px;
@@ -27,23 +40,43 @@ body
         align-items: center;
         margin-top: 80px;
     }
-
     
     .barrinha
     {
         margin-top: 20px;
         margin-left: 310px;
-
-
     }
-
     .logo
     {
         margin-left: 15px;
     }
-
     .titulo
     {
         margin-left: 20px;
         margin-top: -45px;
+    }
+
+    /*div para aparecer a listagem do perfil*/
+
+    
+    .dados1
+    {
+        width: 290px;
+        font-size: 25px;
+        color: #7D0000;
+    }
+
+    .dados
+    {
+        width: 300px;
+        font-size: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        background-color: rgba(44, 119, 119, 0.895);
+        padding-left: 23px;
+        background-color: #7D0000;
+        border-radius:5px ;
+
     }
