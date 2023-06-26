@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doces</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="produto_individual.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-    <script src="produto_individual.js"></script>
+    <link rel="stylesheet" href="produtos.css">
+    <script src="produtos.js"></script>
 
 </head>
 <body>
@@ -39,13 +38,9 @@
     </div>
     <br><br><br>
 <?php
-                include("conecta.php"); // conectar com banco de dados
-
-                $id = $_GET['id']; // Obtém o ID da URL
-
-                $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.Id_produtos = :id");
-                $comando->bindParam(':id', $id);
-                $resultado = $comando->execute();  
+            include("conecta.php"); // conectar com banco de dados
+            $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.categoria = 'doces';");
+            $resultado = $comando->execute();  
 
             while ( $linhas = $comando->fetch() )
             {
@@ -54,38 +49,25 @@
                 $i=base64_encode($imagem);
                 $preco = $linhas ["preco"];
                 $id = $linhas ["Id_produtos"];
-                $q = $linhas ["quantidade"];
                 echo("
-                <div class=\"foto\">
-                    <b>$Nome</b> 
-                    <img class=\"imagem\" src=\"data:image/jpeg;base64,$i\" width=\"150px\">
-                </div>
+                <div class=\"tudo\" id=\"tudo\">
+
+            <div class=\"fild\">
+              <img class=\"imagem\" src=\"data:image/jpeg;base64,$i\">
+            </div>
+
+            <div class=\"nome\">
                 <br>
-                <fieldset class=\"fil1\"> 
-      
-                  <table align=\"center\">
-                    <tr>
-                      <td> <input type=\"checkbox\"> SEM OVO</td>  <td><input type=\"checkbox\"> SEM GLÚTEM</td>
-                    </tr>
+                <b>$Nome</b>
+                <br>
+                <b>R$ $preco</b>
+            </div>
 
-                    <tr>
-                      <td><input type=\"checkbox\"> SEM LEITE</td>  <td><input type=\"checkbox\"> SEM SAL</td>
-                    </tr>
-                  </table>
-                </fieldset>
-                
-                <div class=\"uni\">
-
-                <fieldset class=\"fil2\">
-                 
-                
-                 <button onclick=\"Subtrair();\" class=\"menos\"> <b>-</b> </button>
-                 <input class=\"numero\" value=\"1\" id=\"numero\" type=\"number\">
-                 <button onclick=\"Adicionar();\" class=\"mais\"><b>+</b></button>
-             
-                </fieldset>
-
-                <button onclick=\"comprar($id);\" class=\"comprar\"> COMPRAR </button>
+            <div class=\"ult\">  
+                <button class=\"comprar\" onclick=\"comprarRedirecionar('$id')\">COMPRAR</button>
+            </div>
+            </div>
+            </div>
                 ");
             }
             

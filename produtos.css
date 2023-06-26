@@ -134,10 +134,11 @@ body
 
 .nome
 {
-    margin-left: 10px;
     font-size: 17px;
     height: 100px;
+    width: 200px;
     display: flex;
+    flex-direction: column;
     text-align: center;
 
 }

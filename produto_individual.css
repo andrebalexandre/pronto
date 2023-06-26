@@ -11,6 +11,8 @@ body
     font-family: "Audiowide", sans-serif;
 }
 
+.principal
+
 
 .div1
 {
@@ -19,10 +21,21 @@ body
     justify-items: center;
 }
   
+.quadrado
+{
+    width: 320px;
+    height: 90px;
+    background-color: #7D0000;
+    border-radius: 0px 0px 20% 20%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
 
 .barra
 {
-    width: 360px;
+    width: 100%;
     height: 3vh;
     background-color: #7D0000;
     display: flex;
@@ -46,11 +59,91 @@ body
     width: 200px;
 }
 
-.tudo
+.foto
 {
     width: 100%;
-    height: 100%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+    font-size: 25px;
     
 }
 
+.fil1
+{
+    margin-left: 5px;
+    width: 86%;
+    border-radius: 20px;
+    font-size: 5x;
+    border-style: none;
 
+}
+
+.uni
+{
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+   
+
+}
+
+.qtd
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+
+.comprar
+{
+  width: 150px;
+  height: 5vh;
+  margin-top: 30px;
+  color: white;
+  border-radius:15px;
+  background-color: #7D0000;
+}
+
+.fil2
+{
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+.menos
+{
+height: 40px;
+width: 40px;
+}
+
+.mais
+{
+    height: 40px;
+    width: 40px;
+}
+.numero
+{
+    width: 120px;
+    text-align: center;   
+}
+
+img
+{
+    border-radius: 20px;
+}

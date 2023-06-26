@@ -1,7 +1,7 @@
 <?php
 include("conecta.php"); // conectar com banco de dados
 
-$comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.preco, produtos.imagem FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos" );
+$comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.preco, produtos.imagem, carrinho.quantidade FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos; FROM produtos INNER JOIN carrinho WHERE produtos.quantidade = carrinho.quantidade" );
 $resultado = $comando->execute();
 
 
@@ -62,34 +62,35 @@ $resultado = $comando->execute();
         <?php
             while ( $linhas = $comando->fetch() )
             {
-                $id = $linhas ["Id_produtos"];
+                $Id_produtos = $linhas ["Id_produtos"];
                 $Nome = $linhas ["nome"];
                 $imagem = $linhas ["imagem"];
                 $imagem=base64_encode($imagem);
                 $preco = $linhas ["preco"];
+                $quantidade = $linhas ["quantidade"];
                 echo("
                 <div class=\"tudo\" id=\"tudo\">
 
             <div class=\"fild\">
-              <img src=\"data:image/jpeg;base64,$imagem\" width='50px'>
+              <img class=\"imagem\" src=\"data:image/jpeg;base64,$imagem\" width='50px'>
             </div>
 
             <div class=\"nome\">
                <b>$Nome</b>
-                <br> <br>
+                <br>
                 <b>R$ $preco</b>
             </div>
 
             <div class=\"ult\">
 
                  <div class=\"preencher\">
-                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='' width=\"30px\">
+                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/exluir.png' width=\"20px\">
                  </div>
 
                  <div class=\"quantidade\">
                     <fieldset class=\"geral\">
                         <button onclick=\"Subtrair();\" class=\"menos\"> <b>-</b> </button>
-                        <input class=\"numero\" value=\"1\" id=\"numero\" type=\"number\">
+                        <input class=\"numero\" value=\"$quantidade\" id=\"numero\" type=\"number\">
                         <button onclick=\"Adicionar();\" class=\"mais\"><b>+</b></button>
                     </fieldset>
                  </div>
@@ -101,7 +102,7 @@ $resultado = $comando->execute();
         ?>
 
 <fieldset class="teste1">
-           <a href="pg_pagamentos.html"> <button  class="teste">COMPRAR</button> </a>
+           <a href="pg_pagamentos.html"> <button  class="comprar">COMPRAR</button> </a>
          </fieldset>
 
         <script>

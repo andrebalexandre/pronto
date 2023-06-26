@@ -13,7 +13,7 @@
 <body>
     <div class="principal">
         <header id="header">
-            <a id="logo" href="doces.html"><img src="img/seta.png" width="20px"></a>
+            <a id="logo" onclick="voltar()"><img src="img/seta.png" width="20px"></a>
             <nav id="nav">
                 <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
             <span id="hamburger"></span>
@@ -39,7 +39,7 @@
     <br><br><br>
 <?php
             include("conecta.php"); // conectar com banco de dados
-            $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.categoria = 'doces';");
+            $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.categoria = 'salgados';");
             $resultado = $comando->execute();  
 
             while ( $linhas = $comando->fetch() )
@@ -57,6 +57,7 @@
             </div>
 
             <div class=\"nome\">
+                <br>
                 <b>$Nome</b>
                 <br>
                 <b>R$ $preco</b>
@@ -74,4 +75,10 @@
         ?>
         <div class=tudo></div>
 </body>
+<script>
+    function voltar() 
+    {
+        window.history.back();
+    }
+</script>
 </html>
