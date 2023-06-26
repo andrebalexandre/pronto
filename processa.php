@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("conecta.php");
+include_once("conexao.php");
 
 if(!empty($_POST['estrela'])){
 	//$logado = $_SESSION["logado"];
