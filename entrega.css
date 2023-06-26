@@ -10,7 +10,7 @@ body
 
     .div3
     {
-        margin-top: 80px;
+        margin-top: 10px;
         margin-left: 24px;
         width: 315px;
         height: 50px;
@@ -21,11 +21,13 @@ body
 
     .div4
     {
-        margin-top: 80px;
+        margin-top: 40px;
         margin-left: 24px;
         width: 315px;
         height: 50px;
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
         justify-items: center;
     }
@@ -313,4 +315,42 @@ body
         box-sizing: inherit;
       }
       
-    
+      /* avaliação*/
+
+
+      .avaliacao
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+      }
+
+      .btavaliar
+      {
+        width: 120px;
+        height: 40px;
+        font-size: 20px;
+        background-color: #7D0000;
+        color: white;
+        border-radius: 15px;
+      }
+      
+      
+
+    .estrelas input[type=radio]
+      {
+        display: none;
+       
+      }
+    .estrelas label i.fa:before
+      {
+        content: '\f005';
+        color: #FC0;
+      }
+    .estrelas  input[type=radio]:checked  ~ label i.fa:before
+    {
+        color: #CCC;
+      }
