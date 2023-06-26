@@ -8,7 +8,7 @@ $resultado = $comando->execute();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
 <link rel="website icon " type="png"
   href="img/logo.png">
