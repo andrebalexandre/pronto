@@ -86,7 +86,7 @@ $resultado = $comando->execute();
             <div class=\"ult\">
 
                  <div class=\"preencher\">
-                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/exluir.png' width=\"20px\">
+                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/x.png' width=\"20px\">
                  </div>
 
                  <div class=\"quantidade\">

@@ -23,7 +23,7 @@
           </button>
           <ul id="menu" role="menu">
             <li><a href="pgadmin.php">Cadastros</a></li>
-            <li><a href="adm.html">Cadastrar produtos</a></li>
+            <li><a href="cadastrarprodutos.html">Cadastrar produtos</a></li>
             <li><a href="/">Pedidos</a></li>
             <li><a href="/">Atendimento</a></li>
           </ul>
