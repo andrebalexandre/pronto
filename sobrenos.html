@@ -15,7 +15,7 @@
 <body>
   <div class="principal">
     <header id="header">
-        <a id="logo" href="carrinho.html"><img src="img/seta.png" width="20px"></a>
+      <a id="logo" onclick="voltar()"><img src="img/seta.png" width="20px"></a>
         <a id="logo" href=""><img src="" width="20px"></a>
         <nav id="nav">
           <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
@@ -61,4 +61,13 @@
     <br> <br> <br>
    </div>
 </body>
+
+<script>
+
+function voltar() 
+    {
+        window.history.back();
+    }
+            
+</script>
 </html>
