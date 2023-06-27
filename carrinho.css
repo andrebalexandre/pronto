@@ -230,7 +230,7 @@ body
 
 .teste1
 {
-    border-style: none;
+   border-style: none;
 }
 
 .comprar
@@ -238,6 +238,7 @@ body
   width: 150px;
   height: 5vh;
   margin-top: 15px;
+  margin-left: 175px;
   color: white;
   border-radius:15px;
   background-color: #7D0000;
@@ -250,4 +251,21 @@ body
     height: 80px;
     border:2px solid #7D0000;
     border-radius: 20px;
+}
+
+.y
+{
+    width: 100%;
+    height: 450px;
+    background-color: aquamarine;
+    overflow-y: scroll;
+}
+.total
+{
+    position: absolute;
+    width: 45%;
+    height: 40px;
+    background-color: rgb(127, 165, 255);
+  
+    
 }
