@@ -28,7 +28,7 @@ session_start();
         {
             $_SESSION["logado"] = $email;
             $_SESSION["admin"] = "s";
-            header("Location:  pgadmin.php");
+            header("Location:  contas.php");
             
 
         }

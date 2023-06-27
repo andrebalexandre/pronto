@@ -4,14 +4,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
 <link rel="website icon " type="png"
   href="img/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="avaliacao.css">
+    <link rel="stylesheet" href="minhaconta.css">
 
 </head>
 <body>
@@ -42,3 +41,35 @@
         </div>
     </div>
 
+    <div class="div3">
+     <?php
+
+  
+         include("conecta.php");
+
+$logado = $_SESSION["logado"];
+$admin = $_SESSION["admin"];
+if ($admin == "s") {
+    $comando = $pdo->prepare("SELECT qnt_estrela, Id_usuario FROM avaliacao");
+    $comando->execute();
+}
+
+while ($linhas = $comando->fetch()) {
+    $id = $linhas["Id_usuario"];
+    $estrelas = $linhas["qnt_estrela"];
+
+   
+    echo("<div class='dados'>");
+    echo("Email: $id<br>");
+
+   
+    if ($estrelas) {
+        echo("Estrelas: $estrelas");
+    } else {
+        echo("Estrelas: 0");
+    }
+
+    echo("</div>");
+}
+?>
+          </div>
