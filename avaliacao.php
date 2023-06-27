@@ -72,5 +72,4 @@ while ($linhas = $comando->fetch()) {
     echo("</div>");
 }
 ?>
-         
           </div>
