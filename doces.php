@@ -48,14 +48,14 @@
             {
                 $Nome = $linhas ["nome"];
                 $imagem = $linhas ["imagem"];
-                $i=base64_encode($imagem);
+                $i = base64_encode($imagem);
                 $preco = $linhas ["preco"];
                 $id = $linhas ["Id_produtos"];
                 echo("
                 <div class=\"tudo\" id=\"tudo\">
 
             <div class=\"fild\">
-              <img class=\"imagem\" src=\"data:image/jpeg;base64,$i\">
+                <img src='data:image/jpeg;base64,$i' class=\"imagem\">
             </div>
 
             <div class=\"nome\">

@@ -23,7 +23,7 @@ $resultado = $comando->execute();
 
 
 </head>
-<body>
+<body onload="CalcularTotal()";>
     <div class="principal">
         <header id="header">
             <a id="logo" onclick="voltar()"><img src="img/seta.png" width="20px"></a>
@@ -74,7 +74,6 @@ $resultado = $comando->execute();
                 $preco = $linhas ["preco"];
                 $quantidade = $linhas ["quantidade"];
                 $subtotal = $preco * $quantidade;
-                $total += $subtotal;
                 
                 echo("
       <!-- Seu código HTML para exibir os itens do carrinho -->
@@ -85,7 +84,7 @@ $resultado = $comando->execute();
         <div class=\"nome\">
           <b>$Nome</b>
           <br>
-          <b>R$ $preco</b>
+          <b>R$ <span id=\"span_$Id_produtos\">$preco</span></b>
         </div>
         <div class=\"ult\">
           <div class=\"preencher\">
@@ -93,9 +92,9 @@ $resultado = $comando->execute();
           </div>
           <div class=\"quantidade\">
             <fieldset class=\"geral\">
-              <button onclick=\"Subtrair($Id_produtos); calcularTotal();\" class=\"menos\"> <b>-</b> </button>
+              <button onclick=\"Subtrair($Id_produtos);\" class=\"menos\"> <b>-</b> </button>
               <input class=\"numero quantidade-produto\" value=\"$quantidade\" id=\"numero_$Id_produtos\" type=\"number\" data-preco=\"$preco\" onchange=\"calcularTotal();\">
-              <button onclick=\"Adicionar($Id_produtos); calcularTotal();\" class=\"mais\"><b>+</b></button>
+              <button onclick=\"Adicionar($Id_produtos);\" class=\"mais\"><b>+</b></button>
             </fieldset>
           </div>
           <div class=\"botao\">  </div>
@@ -106,7 +105,7 @@ $resultado = $comando->execute();
         ?>
  </div>
 <fieldset class="teste1">
-<div class="total"></div>
+<div id="t" class="total"></div>
 <a href="pg_pagamentos.html"> <button class="comprar">COMPRAR</button> </a>
          </fieldset>
 </body>
