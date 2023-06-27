@@ -65,13 +65,15 @@ session_start();
             </button>
     </div>
     <br>
+   
 <div class="avaliacao">
-    <h1>Avalie o seu Pedido!</h1>
+<h1>Avalie o seu Pedido!</h1>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg']."<br><br>";
 			unset($_SESSION['msg']);
 		}
+
 		?>
 		<form method="POST" action="processa.php" enctype="multipart/form-data">
 
