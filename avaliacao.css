@@ -30,7 +30,7 @@ body
 
     .barra
     {
-        width: 360px;
+        width: 380px;
         height: 20px;
         background-color: #7D0000;
         display: flex;
@@ -60,5 +60,23 @@ body
         margin-top: -45px;
     }
 
+    .dados
+    {
+        width: 300px;
+        font-size: 30px;
+        color: white;
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        padding-left: 20px;
+        background-color: rgba(44, 119, 119, 0.895);
+        padding-left: 23px;
+        background-color: #7D0000;
+        border-radius:5px ;
+    }
   
+    .dados1
+    {
+        height: 10px;
+    }
 
