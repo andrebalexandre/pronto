@@ -107,7 +107,7 @@ $resultado = $comando->execute();
  </div>
 <fieldset class="teste1">
 <div class="total"></div>
-<a href="pg_pagamentos.html"> <button  class="comprar">COMPRAR</button> </a>
+<a href="pg_pagamentos.html"> <button class="comprar">COMPRAR</button> </a>
          </fieldset>
 </body>
 </html>
