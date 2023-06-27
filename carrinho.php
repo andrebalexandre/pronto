@@ -5,6 +5,7 @@ $comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.p
 $resultado = $comando->execute();
 
 
+
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +62,8 @@ $resultado = $comando->execute();
             </div>
            
         </div>
+        <div class="y">
+ 
         <?php
             while ( $linhas = $comando->fetch() )
             {
@@ -70,67 +73,41 @@ $resultado = $comando->execute();
                 $imagem=base64_encode($imagem);
                 $preco = $linhas ["preco"];
                 $quantidade = $linhas ["quantidade"];
-                echo("
-                <div class=\"tudo\" id=\"tudo\">
-
-            <div class=\"fild\">
-              <img class=\"imagem\" src=\"data:image/jpeg;base64,$imagem\" width='50px'>
-            </div>
-
-            <div class=\"nome\">
-               <b>$Nome</b>
-                <br>
-                <b>R$ $preco</b>
-            </div>
-
-            <div class=\"ult\">
-
-                 <div class=\"preencher\">
-                    <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/x.png' width=\"20px\">
-                 </div>
-
-                 <div class=\"quantidade\">
-                    <fieldset class=\"geral\">
-                        <button onclick=\"Subtrair();\" class=\"menos\"> <b>-</b> </button>
-                        <input class=\"numero\" value=\"$quantidade\" id=\"numero\" type=\"number\">
-                        <button onclick=\"Adicionar();\" class=\"mais\"><b>+</b></button>
-                    </fieldset>
-                 </div>
-                 <div class=\"botao\">  </div>
-            </div>
-        </div>
-                ");
-            }
-        ?>
-
-<fieldset class="teste1">
-           <a href="pg_pagamentos.html"> <button  class="comprar">COMPRAR</button> </a>
-         </fieldset>
-
-        <script>
-            function Adicionar()
-            {
-                numero.value=parseInt(numero.value)+1
-               
-            }
-
-            function Subtrair()
-            {
-                if(numero.value >1)
-                {
-                    numero.value=parseInt(numero.value)-1
-                }
+                $subtotal = $preco * $quantidade;
+                $total += $subtotal;
                 
-
-            }
-
-            function voltar() 
-    {
-        window.history.back();
+                echo("
+      <!-- Seu código HTML para exibir os itens do carrinho -->
+      <div class=\"tudo\" id=\"tudo\">
+        <div class=\"fild\">
+          <img class=\"imagem\" src=\"data:image/jpeg;base64,$imagem\" width='50px'>
+        </div>
+        <div class=\"nome\">
+          <b>$Nome</b>
+          <br>
+          <b>R$ $preco</b>
+        </div>
+        <div class=\"ult\">
+          <div class=\"preencher\">
+            <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/x.png' width=\"20px\">
+          </div>
+          <div class=\"quantidade\">
+            <fieldset class=\"geral\">
+              <button onclick=\"Subtrair($Id_produtos); calcularTotal();\" class=\"menos\"> <b>-</b> </button>
+              <input class=\"numero quantidade-produto\" value=\"$quantidade\" id=\"numero_$Id_produtos\" type=\"number\" data-preco=\"$preco\" onchange=\"calcularTotal();\">
+              <button onclick=\"Adicionar($Id_produtos); calcularTotal();\" class=\"mais\"><b>+</b></button>
+            </fieldset>
+          </div>
+          <div class=\"botao\">  </div>
+        </div>
+      </div>
+      ");
     }
-            
-
-        </script>
-    
+        ?>
+ </div>
+<fieldset class="teste1">
+<div class="total"></div>
+<a href="pg_pagamentos.html"> <button  class="comprar">COMPRAR</button> </a>
+         </fieldset>
 </body>
 </html>

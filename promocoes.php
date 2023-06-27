@@ -75,8 +75,8 @@
             
 
         ?>
-        <div class=tudo></div>
-</body>
+      
+        </body>
 <script>
     function voltar() 
     {
