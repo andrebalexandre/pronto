@@ -51,7 +51,8 @@
         {
           $comando = $pdo->prepare("SELECT * FROM cadastro where Email = '$logado'");
         }
-       
+        // exemplo pra a avaliação $comando = $pdo->prepare("SELECT qnt_estrela, Id_usuario FROM avaliacao");
+
         $resultado = $comando->execute();
         
         while( $linhas = $comando->fetch()){
