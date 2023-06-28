@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="produto_individual.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <script src="js/produto_individual.js"></script>
-
 </head>
 <body>
     <div class="principal">
@@ -21,11 +20,11 @@
             <span id="hamburger"></span>
           </button>
           <ul id="menu" role="menu">
-            <li><a href="minhaconta.php">Minha Conta</a></li>
-            <li><a href="principal.html">Produtos</a></li>
-            <li><a href="sobrenos.html">Sobre nós</a></li>
-            <li><a href="carrinho.php">Carrinho</a></li>
-            <li><a href="fale_conosco.html">Fale conosco</a></li>
+            <li><a href="minhaconta.php">Minha Conta</a></li> <!-- Link para a página "Minha Conta" -->
+            <li><a href="principal.html">Produtos</a></li> <!-- Link para a página "Produtos" -->
+            <li><a href="sobrenos.html">Sobre nós</a></li> <!-- Link para a página "Sobre nós" -->
+            <li><a href="carrinho.php">Carrinho</a></li> <!-- Link para a página "Carrinho" -->
+            <li><a href="fale_conosco.html">Fale conosco</a></li> <!-- Link para a página "Fale conosco" -->
           </ul>
         </nav>
       </header>
@@ -33,44 +32,43 @@
     </div>
     <div class="div2">
         <div class="barra">
-            
-            <img src="img/logo.png" width="110px" class="logo">
-            <img src="img/titulo1.png" width="190px" class="titulo">
-        </div>
+        <img src="img/logo.png" width="110px" class="logo">
+        <img src="img/titulo1.png" width="190px" class="titulo">
     </div>
-    <br><br><br>
+</div>
+<br><br><br>
 <?php
-                include("conecta.php"); // conectar com banco de dados
+                include("conecta.php"); // Inclui o arquivo de conexão com o banco de dados
 
                 $id = $_GET['id']; // Obtém o ID da URL
 
-                $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.Id_produtos = :id");
-                $comando->bindParam(':id', $id);
-                $resultado = $comando->execute();  
+                $comando = $pdo->prepare("SELECT * FROM produtos WHERE produtos.Id_produtos = :id"); // Prepara a consulta SQL para selecionar os dados do produto com base no ID
+                $comando->bindParam(':id', $id); // Vincula o parâmetro do ID à consulta
+                $resultado = $comando->execute(); // Executa a consulta e armazena o resultado
 
             while ( $linhas = $comando->fetch() )
             {
-                $Nome = $linhas ["nome"];
-                $imagem = $linhas ["imagem"];
-                $i=base64_encode($imagem);
-                $preco = $linhas ["preco"];
-                $id = $linhas ["Id_produtos"];
-                $q = $linhas ["quantidade"];
+                $Nome = $linhas ["nome"]; // Obtém o nome do produto
+                $imagem = $linhas ["imagem"]; // Obtém a imagem do produto
+                $i=base64_encode($imagem); // Codifica a imagem em base64
+                $preco = $linhas ["preco"]; // Obtém o preço do produto
+                $id = $linhas ["Id_produtos"]; // Obtém o ID do produto
+                $q = $linhas ["quantidade"]; // Obtém a quantidade do produto
                 echo("
                 <div class=\"foto\">
                     <b>$Nome</b> 
-                    <img class=\"imagem\" src=\"data:image/jpeg;base64,$i\" width=\"150px\">
+                    <img class=\"imagem\" src=\"data:image/jpeg;base64,$i\" width=\"150px\"> <!-- Exibe a imagem do produto -->
                 </div>
                 <br>
                 <fieldset class=\"fil1\"> 
       
                   <table align=\"center\">
                     <tr>
-                      <td> <input type=\"checkbox\"> SEM OVO</td>  <td><input type=\"checkbox\"> SEM GLÚTEM</td>
+                      <td> <input type=\"checkbox\"> SEM OVO</td>  <td><input type=\"checkbox\"> SEM GLÚTEM</td> <!-- Opções de personalização do produto -->
                     </tr>
 
                     <tr>
-                      <td><input type=\"checkbox\"> SEM LEITE</td>  <td><input type=\"checkbox\"> SEM SAL</td>
+                      <td><input type=\"checkbox\"> SEM LEITE</td>  <td><input type=\"checkbox\"> SEM SAL</td> <!-- Opções de personalização do produto -->
                     </tr>
                   </table>
                 </fieldset>
@@ -80,24 +78,24 @@
                 <fieldset class=\"fil2\">
                  
                 
-                 <button onclick=\"Subtrair();\" class=\"menos\"> <b>-</b> </button>
-                 <input class=\"numero\" value=\"1\" id=\"numero\" type=\"number\">
-                 <button onclick=\"Adicionar();\" class=\"mais\"><b>+</b></button>
+                 <button onclick=\"Subtrair();\" class=\"menos\"> <b>-</b> </button> <!-- Botão para diminuir a quantidade do produto -->
+                 <input class=\"numero\" value=\"1\" id=\"numero\" type=\"number\"> <!-- Campo de entrada para a quantidade do produto -->
+                 <button onclick=\"Adicionar();\" class=\"mais\"><b>+</b></button> <!-- Botão para aumentar a quantidade do produto -->
              
                 </fieldset>
 
-                <button onclick=\"comprar($id);\" class=\"comprar\"> COMPRAR </button>
+                <button onclick=\"comprar($id);\" class=\"comprar\"> COMPRAR </button> <!-- Botão para comprar o produto -->
                 ");
             }
             
 
         ?>
-        <div class=tudo></div>
+    <div class=tudo></div>
 </body>
 <script>
     function voltar() 
     {
-        window.history.back();
+        window.history.back(); // Função para voltar para a página anterior
     }
 </script>
 </html>
