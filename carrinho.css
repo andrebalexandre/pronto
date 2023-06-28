@@ -264,5 +264,7 @@ body
     position: absolute;
     width: 45%;
     height: 40px;
-    background-color: rgb(127, 165, 255);
+    font-size: 25px;
+    color: black;
+    background-color:#EDD9D9 ;
 }
