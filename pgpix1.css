@@ -80,6 +80,7 @@ a:hover {
     background: none;
     cursor: pointer;
     gap: 0.5rem;
+    color: white;
   }
   #hamburger {
     border-top: 2px solid;
