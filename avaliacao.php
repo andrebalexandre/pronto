@@ -8,7 +8,7 @@
   href="img/logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Conta</title>
+    <title>Avaliação</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="minhaconta.css">
 
@@ -24,8 +24,6 @@
           <ul id="menu" role="menu">
             <li><a href="contas.php">Cadastros</a></li>
             <li><a href="cadastrarprodutos.html">Cadastrar produtos</a></li>
-            <li><a href="/">Pedidos</a></li>
-            <li><a href="/">Atendimento</a></li>
             <li><a href="avaliacao.php">Avaliações</a></li>
           </ul>
         </nav>

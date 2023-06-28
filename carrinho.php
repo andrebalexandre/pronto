@@ -4,8 +4,6 @@ include("conecta.php"); // conectar com banco de dados
 $comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.preco, produtos.imagem, carrinho.quantidade FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos; FROM produtos INNER JOIN carrinho WHERE produtos.quantidade = carrinho.quantidade" );
 $resultado = $comando->execute();
 
-
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ $resultado = $comando->execute();
                 <li><a href="minhaconta.php">Minha Conta</a></li>
                 <li><a href="principal.html">Produtos</a></li>
                 <li><a href="sobrenos.html">Sobre nós</a></li>
-                <li><a href="carrinho.html">Carrinho</a></li>
+                <li><a href="carrinho.php">Carrinho</a></li>
                 <li><a href="fale_conosco1.html">Fale conosco</a></li>
               </ul>
             </nav>
@@ -67,12 +65,12 @@ $resultado = $comando->execute();
         <?php
             while ( $linhas = $comando->fetch() )
             {
-                $Id_produtos = $linhas ["Id_produtos"];
-                $Nome = $linhas ["nome"];
-                $imagem = $linhas ["imagem"];
-                $imagem=base64_encode($imagem);
-                $preco = $linhas ["preco"];
-                $quantidade = $linhas ["quantidade"];
+               $Id_produtos = $linhas ["Id_produtos"];
+               $Nome = $linhas ["nome"];
+               $imagem = $linhas ["imagem"];
+               $imagem=base64_encode($imagem);
+               $preco = $linhas ["preco"];
+               $quantidade = $linhas ["quantidade"];
                 $subtotal = $preco * $quantidade;
                 
                 echo("

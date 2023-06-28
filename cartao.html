@@ -12,7 +12,10 @@
  
 </head>
 <body>
-    
+   <div class="sopraseta">
+
+    <a id="logo" onclick="voltar()"><img src="img/seta.png" width="30px"></a>
+
     <div class="wrapper" id="app">
         <div class="card-form">
           <div class="card-list">
@@ -153,7 +156,13 @@
         </div>
       
       </div>
-    
+    </div> 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js">
+
+    function voltar() 
+    {
+        window.history.back();
+    }
+</script>
 </html>
