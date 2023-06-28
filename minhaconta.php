@@ -26,6 +26,7 @@
             <li><a href="sobrenos.html">Sobre nós</a></li>
             <li><a href="carrinho.html">Carrinho</a></li>
             <li><a href="fale_conosco.html">Fale conosco</a></li>
+            <li><a href="pglogin1.html">Sair</a></li>
           </ul>
         </nav>
       </header>
