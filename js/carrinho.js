@@ -1,6 +1,6 @@
-function Fechar(Id)
+function Fechar(productId)
 {
-    window.open("excluircarrinho.php?id=" +Id, "_self");
+    window.open("excluircarrinho.php?id=" + productId, "_self");
 }
 
 function Adicionar(productId) {

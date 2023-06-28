@@ -1,9 +1,8 @@
 <?php
 include("conecta.php"); // conectar com banco de dados
 
-$comando = $pdo->prepare("SELECT produtos.Id_produtos, produtos.nome, produtos.preco, produtos.imagem, carrinho.quantidade FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos; FROM produtos INNER JOIN carrinho WHERE produtos.quantidade = carrinho.quantidade" );
+$comando = $pdo->prepare("SELECT produtos.Id_produtos, carrinho.quantidade, produtos.imagem, produtos.preco, produtos.nome FROM produtos INNER JOIN carrinho WHERE produtos.Id_produtos = carrinho.Id_produtos; FROM produtos INNER JOIN carrinho WHERE produtos.quantidade = carrinho.quantidade" );
 $resultado = $comando->execute();
-
 ?>
 
 <!DOCTYPE html>
@@ -65,13 +64,13 @@ $resultado = $comando->execute();
         <?php
             while ( $linhas = $comando->fetch() )
             {
-               $Id_produtos = $linhas ["Id_produtos"];
-               $Nome = $linhas ["nome"];
-               $imagem = $linhas ["imagem"];
-               $imagem=base64_encode($imagem);
-               $preco = $linhas ["preco"];
-               $quantidade = $linhas ["quantidade"];
-                $subtotal = $preco * $quantidade;
+              $Id_produtos = $linhas ["Id_produtos"];
+              $Nome = $linhas ["nome"];
+              $imagem = $linhas ["imagem"];
+              $imagem=base64_encode($imagem);
+              $preco = $linhas ["preco"];
+              $quantidade = $linhas ["quantidade"];
+              $subtotal = $preco * $quantidade;
                 
                 echo("
       <!-- Seu código HTML para exibir os itens do carrinho -->
@@ -86,7 +85,7 @@ $resultado = $comando->execute();
         </div>
         <div class=\"ult\">
           <div class=\"preencher\">
-            <img onclick=\"Fechar('tudo');\" class=\"fechar\" src='img/x.png' width=\"20px\">
+            <img onclick=\"Fechar($Id_produtos);\" class=\"fechar\" src='img/x.png' width=\"20px\">
           </div>
           <div class=\"quantidade\">
             <fieldset class=\"geral\">
