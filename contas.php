@@ -16,7 +16,7 @@
 <body>
     <div class="principal">
     <header id="header">
-        <a id="logo" href="salgados.html"><img src="img/seta.png" width="20px"></a>
+    <a id="logo" onclick="voltar()"><img src="" width="20px"></a>
         <nav id="nav">
           <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
             <span id="hamburger"></span>
@@ -25,6 +25,7 @@
             <li><a href="contas.php">Cadastros</a></li>
             <li><a href="cadastrarprodutos.html">Cadastrar produtos</a></li>
             <li><a href="avaliacao.php">Avaliações</a></li>
+            <li><a href="pglogin1.html">Sair</a></li>
           </ul>
         </nav>
       </header>

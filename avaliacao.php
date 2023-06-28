@@ -10,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="minhaconta.css">
+    <link rel="stylesheet" href="avaliacao.css">
 
 </head>
 <body>
     <div class="principal">
     <header id="header">
-        <a id="logo" href="salgados.html"><img src="img/seta.png" width="20px"></a>
+    <a id="logo" onclick="voltar()"><img src="img/seta.png" width="20px"></a>
         <nav id="nav">
           <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">Menu
             <span id="hamburger"></span>
@@ -70,4 +70,11 @@ while ($linhas = $comando->fetch()) {
     echo("</div>");
 }
 ?>
+
+<script>
+    function voltar() 
+    {
+        window.history.back();
+    }
+</script>
           </div>
