@@ -7,7 +7,7 @@ ul {
 a {
   color: black;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: sans-serif;     /* NÃO PRECISA DISSO*/
   font-size: 20px;
 
 }
@@ -16,12 +16,12 @@ a:hover {
   background: rgba(0, 0, 0, 0.05);
 }
 
-#logo {
+#logo { /* ALTERA A LOGO*/
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-#header {
+#header { /* ESTILO DA BARRA LÁ DE CIMA*/
   box-sizing: border-box;
   height: 70px;
   padding: 1rem;
@@ -42,6 +42,19 @@ body
         margin: 0px;
     }
 
+
+    .barra
+    {
+        width: 360px;
+        height: 20px;
+        background-color: #7D0000;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    
     .d1
     {
         display: flex;
@@ -95,17 +108,7 @@ body
         color: white;
     }
 
-    .barra
-    {
-        width: 360px;
-        height: 20px;
-        background-color: #7D0000;
-        display: flex;
-        flex-direction: row;
-        align-content: center;
-        align-items: center;
-        margin-top: 80px;
-    }
+    
     
 
     .seta

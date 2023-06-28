@@ -9,7 +9,7 @@
         align-items: center;
     }
     
-    .d1
+    .d1 /* LOCAL DA LOGO*/
     {
         width: 100px;
         height: 25vh;
@@ -23,7 +23,7 @@
         margin-top: 80px;
     }
     
-    .d2
+    .d2 /* LOCAL DA TITULO*/
     {
         font-size: 20px;
         width: 150px;
@@ -33,7 +33,7 @@
         align-content: center;
         align-items: center;
     }
-    .d3
+    .d3 /* TAMANHO DA DIV NO FORMS*/
     {
         width: 200px;
         height: 23.5vh;
@@ -44,14 +44,14 @@
         align-items: center;
     }
     
-    fieldset
+    fieldset /* INPUTS*/
     {
         border-style: solid;
         border-color: black;
         border-radius: 10px;
     }
     
-    .bt
+    .bt /* BOTAO*/
     {
         margin-left: 40px;
         width: 130px;
@@ -63,12 +63,12 @@
         color: white;
     }
 
-    a
+    a /* ALTERA ESTILO DO LINK*/
     {
         color: black;
         text-decoration: none;
     }
-    .escrita
+    .escrita /* ALTERA ESTILO DA ESCRITA*/
     {
         font-size: 20px;
         font-style: italic;
